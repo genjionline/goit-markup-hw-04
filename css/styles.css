@@ -170,6 +170,12 @@ button {
 
 .solutions {
     background-color: #2E2F42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.70) 0%,
+        rgba(46, 47, 66, 0.70)),
+    url(/images/people-office.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 600px;
     padding: 188px 0;
 }
