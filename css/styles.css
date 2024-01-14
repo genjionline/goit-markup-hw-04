@@ -70,6 +70,13 @@ h3 {
     flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
+.strategy-svg-box {
+    background-color: #F4F4FD;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    padding: 24px 100px;
+}
+
 .strategy-title,
 .portfolio-project {
     font-size: 20px;
@@ -78,6 +85,10 @@ h3 {
     letter-spacing: 0.02em;
     margin-top: 0;
     margin-bottom: 8px;
+}
+
+.strategy-title {
+    margin-top: 8px;
 }
 
 .strategy-description,
@@ -154,6 +165,17 @@ button {
     color: #404BBF;
 }
 
+.blue-line::after {
+    content: "";
+    display: block;
+    background-color: #404BBF;
+    position: absolute;
+    width: 48px;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+}
+
 .contacts-link:not(:last-child) {
     margin-right: 40px;
 }
@@ -162,6 +184,11 @@ button {
     color: #2E2F42;
     padding: 24px 0;
     display: block;
+    position: relative;
+}
+
+.blue-line {
+    color: #404BBF;
 }
 
 .main-nav-item:active {
@@ -217,6 +244,20 @@ button {
 
 .team-card-container {
     padding: 32px 0;
+}
+
+.team-card-socials {
+    margin-top: 8px;
+    display: flex;
+    gap: 24px;
+    justify-content: space-around;
+}
+
+.socials-svg {
+    background-color: #4D5AE5;
+    padding: 12px;
+    box-sizing: content-box;
+    border-radius: 50%;
 }
 
 footer {
@@ -289,6 +330,31 @@ header .container,
     width: calc((100% - 48px) / 3);
 }
 
+.img-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.text-hover {
+    position: absolute;
+    top: 0;
+    background-color: #4D5AE5;
+    height: 100%;
+    transform: translateY(100%);
+    color: #F4F4FD;
+    font-size: 16px;
+    padding: 40px 32px 0;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.portfolio-list-item:hover .text-hover {
+    transform: translate(0%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-project {
     padding: 0 16px;
     margin-bottom: 8px;
@@ -300,6 +366,22 @@ header .container,
 
 .bottom-section {
     padding: 100px 0;
+}
+
+.bottom-container {
+    display: flex;
+    gap: 120px;
+}
+
+.bottom-socials-text {
+    color: #FFF;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.bottom-socials-list {
+    display: flex;
+    gap: 16px;
 }
 
 .visually-hidden {
