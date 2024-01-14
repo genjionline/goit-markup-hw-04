@@ -28,6 +28,9 @@ img {
 
 .header {
     border: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .main-title {
@@ -75,6 +78,11 @@ h3 {
     border-radius: 4px;
     border: 1px solid #8E8F99;
     padding: 24px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    margin-bottom: 8px;
 }
 
 .strategy-title,
@@ -163,6 +171,7 @@ button {
 .main-nav-item:focus,
 .contacts-link:focus {
     color: #404BBF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blue-line::after {
@@ -173,7 +182,8 @@ button {
     width: 48px;
     height: 4px;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
+    border-radius: 2px;
 }
 
 .contacts-link:not(:last-child) {
@@ -185,6 +195,7 @@ button {
     padding: 24px 0;
     display: block;
     position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blue-line {
@@ -196,13 +207,14 @@ button {
 }
 
 .solutions {
-    background-color: #2E2F42;
     background-image: linear-gradient(
-        rgba(46, 47, 66, 0.70) 0%,
-        rgba(46, 47, 66, 0.70)),
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
     url(/images/people-office.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    min-width: 1440px;
     height: 600px;
     padding: 188px 0;
 }
@@ -224,6 +236,7 @@ button {
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .solutions-order:hover,
@@ -328,6 +341,7 @@ header .container,
 
 .portfolio-list-item {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .img-hover {
@@ -343,16 +357,23 @@ header .container,
     transform: translateY(100%);
     color: #F4F4FD;
     font-size: 16px;
-    padding: 40px 32px 0;
+    padding: 40px 32px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:hover .text-hover {
     transform: translate(0%);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-project {
