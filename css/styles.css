@@ -416,11 +416,9 @@ header .container,
 .bottom-container {
     display: flex;
     align-items: baseline;
-    margin-right: 120px;
 }
 
-.bottom-webstudio,
-.bottom-socials {
+.bottom-webstudio-box {
     margin-right: 120px;
 }
 
